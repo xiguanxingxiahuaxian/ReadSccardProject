@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">ReadSccardProject</string>
+    <string name="prompt_card">请刷卡/插卡或挥卡</string>
+</resources>
