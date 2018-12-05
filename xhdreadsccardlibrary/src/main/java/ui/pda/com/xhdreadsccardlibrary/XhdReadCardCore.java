@@ -1,4 +1,4 @@
-package android.rsp.com.readsccardproject;
+package ui.pda.com.xhdreadsccardlibrary;
 
 import android.app.Activity;
 import android.content.Context;

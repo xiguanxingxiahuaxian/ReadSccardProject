@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
-import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -15,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        XhdReadCardCore.getInstance(this).setCpuup();
+      /*  XhdReadCardCore.getInstance(this).setCpuup();*/
         initView();
     }
 
@@ -30,16 +29,6 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        if (resultCode == 1) {
-            if (data != null) {
-                IdCardBean idcardbean = (IdCardBean) data.getSerializableExtra("idcardbean");
-                Toast.makeText(this, idcardbean.getName(), Toast.LENGTH_SHORT).show();
-            }
-        }
-    }
 
     @Override
     protected void onResume() {

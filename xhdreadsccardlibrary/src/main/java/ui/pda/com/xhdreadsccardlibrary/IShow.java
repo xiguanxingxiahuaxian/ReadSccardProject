@@ -1,4 +1,4 @@
-package android.rsp.com.readsccardproject;
+package ui.pda.com.xhdreadsccardlibrary;
 
 /**
  * 项目名称：ReadSccardProject
