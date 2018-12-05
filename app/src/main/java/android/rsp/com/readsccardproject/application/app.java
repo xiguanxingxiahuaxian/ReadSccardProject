@@ -1,7 +1,6 @@
 package android.rsp.com.readsccardproject.application;
 
 import android.app.Application;
-import android.rsp.com.readsccardproject.XhdReadCardCore;
 
 /**
  * 项目名称：ReadSccardProject
@@ -19,6 +18,6 @@ public class app extends Application{
 
     private void initView() {
         //注册
-        XhdReadCardCore.getInstance(this).Register();
+      /*  XhdReadCardCore.getInstance(this).Register();*/
     }
 }
