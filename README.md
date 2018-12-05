@@ -46,3 +46,17 @@
             super.onDestroy();
             XhdReadCardCore.getInstance(this).endStart();
        }
+       
+ #  集成方式
+       
+       allprojects {
+       		repositories {
+       			...
+       			maven { url 'https://jitpack.io' }
+       		}
+       	}
+       	
+       	dependencies {
+        	        implementation 'com.github.xiguanxingxiahuaxian:ReadSccardProject:Tag'
+        }
+       
