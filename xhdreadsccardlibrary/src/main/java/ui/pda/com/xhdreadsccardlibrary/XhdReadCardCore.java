@@ -145,7 +145,7 @@ public class XhdReadCardCore {
             sb.append("卡号：" + new String(CardNumber) + "\n");
             Log.i("tag", new String(sex));
             IdCardBean cardbean = new IdCardBean.Builder()
-                    .name(new String(name, "GBK"))
+                    .name(new String(name, "GBK").trim())
                     .sex(transStr(sex))
                     .DateBirth(transStr(DateBirth))
                     .IDCard(transStr(IDCard))
@@ -172,7 +172,7 @@ public class XhdReadCardCore {
 
     //除了身份证，其他的全部转String
     private String transStr(byte[] str) {
-        return new String(str);
+        return new String(str).trim();
     }
 
     private APDUEntity setAPDUEntity(CPUCardHandler cpuCardHandler, String strcmd, int le) {
