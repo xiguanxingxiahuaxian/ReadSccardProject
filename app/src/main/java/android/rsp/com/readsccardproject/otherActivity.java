@@ -3,8 +3,14 @@ package android.rsp.com.readsccardproject;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.neuqsoft.r.xh_v2readsccardlibrary.IShow;
+import com.neuqsoft.r.xh_v2readsccardlibrary.IdCardBean;
+import com.neuqsoft.r.xh_v2readsccardlibrary.XhdReadCardCore;
 
 /**
  * 项目名称：ReadSccardProject
@@ -29,11 +35,13 @@ public class otherActivity extends Activity {
         read.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), otherActivity.class);
-                startActivity(intent);
+                String term=XhdReadCardCore.getInstance(getApplicationContext()).getStrTerm();
+                Log.i("term",term);
+                /*boolean term=XhdReadCardCore.getInstance(getApplicationContext()).CheckMm("123456");
+                Log.i("term",term+"");*/
             }
         });
-    /*    XhdReadCardCore.getInstance(this).setShowListener(new IShow() {
+       XhdReadCardCore.getInstance(this).setShowListener(new IShow() {
             @Override
             public void show() {
                 Log.i("执行", "show().....");
@@ -43,10 +51,10 @@ public class otherActivity extends Activity {
             public void disShow() {
                 Log.i("执行", "disshow().....");
             }
-        });*/
+        });
     }
 
-  /*  @Override
+    @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (resultCode == 1) {
@@ -55,17 +63,17 @@ public class otherActivity extends Activity {
                 Toast.makeText(this, idcardbean.getName(), Toast.LENGTH_SHORT).show();
             }
         }
-    }*/
+    }
 
     @Override
     protected void onResume() {
         super.onResume();
-      /*  XhdReadCardCore.getInstance(this).readStart(otherActivity.this);*/
+        XhdReadCardCore.getInstance(this).readStart(otherActivity.this);
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        /*XhdReadCardCore.getInstance(this).endStart();*/
+        XhdReadCardCore.getInstance(this).endStart();
     }
 }

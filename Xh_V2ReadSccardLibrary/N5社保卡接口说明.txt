@@ -1,0 +1,75 @@
+
+
+/** 接口使用说明 */
+
+导入包：com.nexgo.oaf.apiv4.*;
+初始化接口：SicardInterface = new sicard();
+
+1. public int iReaderSicardInit();
+功能：初始化社保环境，该方法应在所有方法之前调用。初始化之后可获取个人信息
+参数：无
+返回值：-1：未检测到社保卡
+	-2：非法的社会保障卡
+	0：初始化成功
+
+2. public int iGetName(byte[] xm);
+功能： 获取姓名
+参数：[OUT]接收buffer
+返回值：成功返回大于0的实际数据长度
+	
+
+3. public int iGetSex(byte[] sex);
+功能： 获取性别
+参数：[OUT]接收buffer
+返回值：成功返回大于0的实际数据长度
+
+
+4. public int iGetSID(byte[] sid);
+功能： 获取性别
+参数：[OUT]接收buffer
+返回值：成功返回大于0的实际数据长度
+
+5. public int iGetBir(byte[] bir);
+功能： 获取出生日期
+参数：[OUT]接收buffer
+返回值：成功返回大于0的实际数据长度
+
+
+6. public int iGetSHBZHM(byte[] shbzhm);
+功能： 获取社会保障号码
+参数：[OUT]接收buffer
+返回值：成功返回大于0的实际数据长度
+
+
+7. public int iGetSBKKH(byte[] kh);
+功能： 获取社保卡卡号
+参数：[OUT]接收buffer
+返回值：成功返回大于0的实际数据长度
+
+
+8. public int iVerifyPIN(byte[] byspin, byte pinlen);
+功能： 校验社保卡PIN
+参数：[OUT]接收buffer
+返回值： -2：卡环境异常
+	 -3：认证失败
+	 -4：卡已被锁
+	 >0：密码错误，剩余验证次数
+	 成功返回0
+
+
+9. public int iGetTermNo(byte[] bysTermNo);
+功能： 获取PSAM卡终端机编号
+参数：[OUT]接收buffer
+返回值：-1：未检测到PSAM卡
+	-2：卡环境异常
+	成功返回大于0的实际数据长度
+
+
+10. public String arrayByteToString(byte[] array, int length);
+功能： 转换函数：byte数组转成字符串
+参数：  [IN]byteArray 数组
+	[IN]length 数组的字节长度
+返回值：转换好的字符串
+
+
+

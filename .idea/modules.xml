@@ -3,8 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/ReadSccardProject.iml" filepath="$PROJECT_DIR$/ReadSccardProject.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Xh_V2ReadSccardLibrary/Xh_V2ReadSccardLibrary.iml" filepath="$PROJECT_DIR$/Xh_V2ReadSccardLibrary/Xh_V2ReadSccardLibrary.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/xhdreadsccardlibrary/xhdreadsccardlibrary.iml" filepath="$PROJECT_DIR$/xhdreadsccardlibrary/xhdreadsccardlibrary.iml" />
+      <module fileurl="file://E:\ggfw\20190218\ReadSccardProject\xhdreadsccardlibrary\xhdreadsccardlibrary.iml" filepath="E:\ggfw\20190218\ReadSccardProject\xhdreadsccardlibrary\xhdreadsccardlibrary.iml" />
     </modules>
   </component>
 </project>

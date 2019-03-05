@@ -1,1 +1,1 @@
-include ':app', ':xhdreadsccardlibrary'
+include ':app', ':Xh_V2ReadSccardLibrary'

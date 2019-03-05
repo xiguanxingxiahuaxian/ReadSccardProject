@@ -1,5 +1,7 @@
 # ReadSccardProject
 
+ #Xh_V2ReadSccardLibrary  
+
 # 初始化
 
 ## XhdReadCardCore.getInstance(this).Register();
@@ -47,7 +49,24 @@
             XhdReadCardCore.getInstance(this).endStart();
        }
        
- #  集成方式
+     
+   
+ # 获取设备终端号
+       XhdReadCardCore.getInstance(this).getStrTerm();
+       return "编号"
+       
+ # 验证密码
+       XhdReadCardCore.getInstance(this).CheckMm(Stirng pw)
+       return ==true?"true":"其他的说明"
+       
+       
+ # 具体例子
+          String term=XhdReadCardCore.getInstance(getApplicationContext()).getStrTerm();
+                       Log.i("term",term);
+          boolean term=XhdReadCardCore.getInstance(getApplicationContext()).CheckMm("123454");
+                       Log.i("term",term+"");
+                       
+ #  集成方式 
        
        allprojects {
        		repositories {
