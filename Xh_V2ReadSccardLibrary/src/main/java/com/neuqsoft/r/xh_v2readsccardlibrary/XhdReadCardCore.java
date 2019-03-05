@@ -243,7 +243,7 @@ public class XhdReadCardCore {
                     iShowlistenter.disShow();
                 }
                 activity.setResult(RESULTCODE, intent);
-                //activity.finish();
+                activity.finish();
             }
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
